@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+* {
+  margin: auto;
+}
+
+body {
+  background-color: hsl(0, 0%, 94%);
+  font-family: "Poppins", sans-serif;
+}
+body section {
+  margin-top: 8%;
+  height: 62.5vh;
+  width: 90.9090909091vh;
+  border-radius: 20px 20px 140px 20px;
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  color: white;
+}
+body section .date__input--div {
+  justify-content: flex-end;
+  display: flex;
+  margin-left: 10vh;
+  margin-bottom: 0px;
+}
+body section .date__input--div .input__div {
+  display: flex;
+  flex-direction: column;
+  grid: 2%;
+  margin: 2%;
+  border-radius: 10px;
+}
+body section .date__input--div .input__div label {
+  color: hsl(0, 1%, 44%);
+  font-family: Bold 700;
+  margin-left: 1px;
+  font-size: x-small;
+}
+body section .date__input--div .input__div input {
+  font-size: 32px;
+  width: 12vh;
+  color: hsl(0, 0%, 8%);
+  font-family: Bold 800;
+  align-content: center;
+  border-radius: 10px;
+  padding: 8px;
+  border-color: hsl(0, 0%, 86%);
+  border-style: solid;
+}
+body section .date__input--div .input__div input::-webkit-inner-spin-button, body section .date__input--div .input__div input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body section .date__input--div .input__div input:hover {
+  border-color: hsl(259, 100%, 65%);
+  cursor: pointer;
+}
+body section .date__input--div .input__div input:focus {
+  caret-color: hsl(259, 100%, 65%);
+}
+body section .division {
+  display: flex;
+  margin-top: 0%;
+}
+body section .division hr {
+  color: white;
+  width: 73vh;
+  border-style: solid;
+  border-color: hsl(0, 0%, 94%);
+}
+body section .division button {
+  border-radius: 34px;
+  border: none;
+  padding: 28px;
+  font-size: x-small;
+  background-color: hsl(259, 100%, 65%);
+  overflow: hidden;
+  position: relative;
+}
+body section .division button img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body section .division button:hover {
+  background-color: black;
+  cursor: pointer;
+}
+body section .date__form {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+body section .date__form .date {
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+body section .date__form .date .result__year {
+  color: hsl(259, 100%, 65%);
+  font-size: 75px;
+  margin-right: 2%;
+  margin-left: 10%;
+}
+body section .date__form .date .result__month {
+  color: hsl(259, 100%, 65%);
+  font-size: 75px;
+  margin-right: 2%;
+  margin-left: 10%;
+}
+body section .date__form .date .result__day {
+  color: hsl(259, 100%, 65%);
+  font-size: 75px;
+  margin-right: 2%;
+  margin-left: 10%;
+}
+body section .date__form .date p {
+  color: hsl(0, 0%, 8%);
+  font-size: xxx-large;
+  font-family: ExtraBold 800 Italic;
+  margin-left: 0;
+}
+body .attribution {
+  display: grid;
+  justify-items: center;
+}/*# sourceMappingURL=index.css.map */
