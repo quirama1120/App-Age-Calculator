@@ -7,6 +7,40 @@ calculatedAgeButton.addEventListener("click", () => {
   const inputYearValue = inputYears.value;
   const inputMonthValue = inputMonth.value;
   const inputDayValue = inputDay.value;
+  const inputArray = [inputYears, inputMonth, inputDay]
+  let inputEmpty = false;
+
+  inputArray.forEach(input => {
+    const label = input.previousElementSibling;
+    const existingError = input.nextElementSibling;
+    if(existingError && existingError.classList.contains("error__message")) {
+      existingError.remove()
+    }
+
+
+    if(input.value.trim() === "") {
+      input.classList.add("input__error")
+      if(label) {
+        label.classList.add("label__error")
+      }
+      inputEmpty = true;
+      const error__message = document.createElement("p");
+      error__message.textContent = "This field is required";
+      error__message.classList.add("error__message");
+      input.parentNode.appendChild(error__message)
+    }
+    else {
+      input.classList.remove("input__error");
+      if(label) {
+        label.classList.remove("label__error");
+      }
+    }
+  }) 
+
+  if(inputEmpty) {
+    return;
+  }
+
   let userBirthDay = new Date(
     inputYearValue,
     inputMonthValue - 1,
@@ -16,6 +50,7 @@ calculatedAgeButton.addEventListener("click", () => {
   let userDateYearAge = currentlyDate.getFullYear() - userBirthDay.getFullYear();
   let userDateMonthAge;
   let userDateDayAge;
+
   //days
   if (
     currentlyDate.getDate() < userBirthDay.getDate() ||

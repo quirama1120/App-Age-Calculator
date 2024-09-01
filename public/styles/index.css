@@ -57,7 +57,23 @@ body section .date__input--div .input__div input:hover {
   cursor: pointer;
 }
 body section .date__input--div .input__div input:focus {
+  border-color: hsl(259, 100%, 65%);
   caret-color: hsl(259, 100%, 65%);
+}
+body section .input__error {
+  border-color: hsl(0, 100%, 67%) !important;
+}
+body section .label__error {
+  color: hsl(0, 100%, 67%) !important;
+  font-family: "Poppins", sans-serif;
+  font-family: Bold 800;
+  margin-bottom: 0.5rem;
+}
+body section .error__message {
+  color: hsl(0, 100%, 67%) !important;
+  font-family: Bold 400;
+  font-size: x-small;
+  margin-top: 0.5rem;
 }
 body section .division {
   display: flex;
@@ -85,8 +101,7 @@ body section .division button img {
   transform: translate(-50%, -50%);
   width: 50%;
   height: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 body section .division button:hover {
   background-color: black;
@@ -129,4 +144,6 @@ body section .date__form .date p {
 body .attribution {
   display: grid;
   justify-items: center;
-}/*# sourceMappingURL=index.css.map */
+}
+
+/*# sourceMappingURL=index.css.map */

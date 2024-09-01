@@ -9,8 +9,8 @@ body {
 
   section {
     margin-top: 8%;
-    height: $full-height / 1.6;
-    width: $full-width / 1.1;
+    height: calc($full-height / 1.6);
+    width: calc($full-width / 1.1);
     border-radius: 20px 20px 140px 20px;
     // background-color: black;
     background-color: $white-color;
@@ -57,10 +57,31 @@ body {
           }
 
           &:focus{
+            border-color: $purple-color;
             caret-color: $purple-color;
+            
           }
         }
       }
+    }
+
+    .input__error {
+      border-color: $light-red-color !important;
+    }
+
+    .label__error {
+      color: $light-red-color !important;
+      font-family: $font-family;
+      font-family: Bold 800;
+      margin-bottom: 0.5rem;
+
+    }
+
+    .error__message {
+      color: $light-red-color !important;
+      font-family: Bold 400;
+      font-size: x-small;
+      margin-top: 0.5rem;
     }
     .division {
       display: flex;
