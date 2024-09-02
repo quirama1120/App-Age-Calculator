@@ -13,6 +13,7 @@ calculatedAgeButton.addEventListener("click", () => {
   const currentDate = new Date()
   const currentYear = currentDate.getFullYear();
 
+
   inputArray.forEach(input => {
     const label = input.previousElementSibling;
     const existingError = input.nextElementSibling;
@@ -40,11 +41,13 @@ calculatedAgeButton.addEventListener("click", () => {
   }) 
   
   if(inputYearValue > currentYear) {
+    const existingError = inputYears.nextElementSibling;
+    if(existingError && existingError.classList.contains("error__message")) {
+      existingError.remove()
+    }
     inputYears.classList.add("input__error")
     const label = inputYears.previousElementSibling;
-    if(label) {
-      label.classList.add("label__eror")
-    }
+    label.classList.add("label__error")
     const error__message = document.createElement("p");
     error__message.textContent = "Must be in the past";
     error__message.classList.add("error__message");
@@ -52,6 +55,35 @@ calculatedAgeButton.addEventListener("click", () => {
     invalidInput = true;
   }
 
+  if(inputMonthValue > 12) {
+    const existingError = inputMonth.nextElementSibling;
+    if(existingError && existingError.classList.contains("error__message")) {
+      existingError.remove()
+    }
+    inputMonth.classList.add("input__error")
+    const label = inputMonth.previousElementSibling;
+    label.classList.add("label__error")
+    const error__message = document.createElement("p");
+    error__message.textContent = "Must be a valid month";
+    error__message.classList.add("error__message");
+    inputMonth.parentNode.appendChild(error__message)
+    invalidInput = true;
+  }
+
+  if(inputDayValue > 31) {
+    const existingError = inputDay.nextElementSibling;
+    if(existingError && existingError.classList.contains("error__message")) {
+      existingError.remove()
+    }
+    inputDay.classList.add("input__error")
+    const label = inputDay.previousElementSibling;
+    label.classList.add("label__error")
+    const error__message = document.createElement("p");
+    error__message.textContent = "Must be a valid day";
+    error__message.classList.add("error__message");
+    inputDay.parentNode.appendChild(error__message)
+    invalidInput = true;
+  }
 
   if(inputEmpty) {
     return;
