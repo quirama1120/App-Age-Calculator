@@ -9,6 +9,9 @@ calculatedAgeButton.addEventListener("click", () => {
   const inputDayValue = inputDay.value;
   const inputArray = [inputYears, inputMonth, inputDay]
   let inputEmpty = false;
+  let invalidInput = false;
+  const currentDate = new Date()
+  const currentYear = currentDate.getFullYear();
 
   inputArray.forEach(input => {
     const label = input.previousElementSibling;
@@ -16,7 +19,6 @@ calculatedAgeButton.addEventListener("click", () => {
     if(existingError && existingError.classList.contains("error__message")) {
       existingError.remove()
     }
-
 
     if(input.value.trim() === "") {
       input.classList.add("input__error")
@@ -36,8 +38,26 @@ calculatedAgeButton.addEventListener("click", () => {
       }
     }
   }) 
+  
+  if(inputYearValue > currentYear) {
+    inputYears.classList.add("input__error")
+    const label = inputYears.previousElementSibling;
+    if(label) {
+      label.classList.add("label__eror")
+    }
+    const error__message = document.createElement("p");
+    error__message.textContent = "Must be in the past";
+    error__message.classList.add("error__message");
+    inputYears.parentNode.appendChild(error__message)
+    invalidInput = true;
+  }
+
 
   if(inputEmpty) {
+    return;
+  }
+
+  if(invalidInput) {
     return;
   }
 
