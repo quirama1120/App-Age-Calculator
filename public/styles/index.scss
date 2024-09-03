@@ -1,4 +1,5 @@
 @import "./variables.scss";
+@import "./mediaquery.scss";
 * {
   margin: auto;
 }
@@ -12,18 +13,32 @@ body {
     height: calc($full-height / 1.6);
     width: calc($full-width / 1.1);
     border-radius: 20px 20px 140px 20px;
-    // background-color: black;
     background-color: $white-color;
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
     color: white;
+    @include tablet {
+      height: min-content;
+    }
+    @include mobile {
+      margin-top: 15%;
+      height: 60%;
+      width: 90%;
+      border-left: 23px;
+      border-radius: 5% 5% 23% 5%;
+    }
+
     .date__input--div {
       justify-content: flex-end;
       display: flex;
       margin-left: 10vh;
       margin-bottom: 0px;
       margin-top: 3rem;
+
+      @include mobile {
+        margin-right: 5%;
+      }
       .input__div {
         display: flex;
         flex-direction: column;
@@ -93,6 +108,10 @@ body {
         border-style: solid;
         border-color: $off-white-color;
       }
+
+      @include mobile {
+        margin-top: 10%;
+      }
       button {
         border-radius: 34px;
         border: none;
@@ -102,6 +121,12 @@ body {
         overflow: hidden;
         position: relative;
 
+      @include mobile {
+        position: absolute;
+        margin-top: -6%;
+        margin-left: 40%;
+        margin-right: 60%;
+      }
         img {
           position: absolute;
           top: 50%;
