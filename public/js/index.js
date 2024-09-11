@@ -103,6 +103,16 @@ calculatedAgeButton.addEventListener("click", () => {
   let userDateMonthAge;
   let userDateDayAge;
 
+  //exactly years
+  if (userBirthDay.getMonth() === currentlyDate.getMonth() && userBirthDay.getDate() === userBirthDay.getDate()) {
+    userDateMonthAge = 0;
+    userDateDayAge = 0;
+    document.querySelector(".result__day").innerHTML = userDateDayAge;
+    document.querySelector(".result__month").innerHTML = userDateMonthAge;
+    document.querySelector(".result__year").innerHTML = userDateYearAge;
+    return;
+  }
+
   //days
   if (
     currentlyDate.getDate() < userBirthDay.getDate() ||
