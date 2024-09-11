@@ -5,7 +5,6 @@
 }
 body {
   background-color: $off-white-color;
-  // background-color: black;
   font-family: $font-family;
 
   section {
@@ -40,8 +39,6 @@ body {
         margin-right: 5%;
       }
       .input__div {
-        display: flex;
-        flex-direction: column;
         grid: 2%;
         margin: 2%;
         border-radius: 10px;
@@ -53,7 +50,7 @@ body {
         }
         input {
           font-size: 32px;
-          width: 12vh;
+          width: 14vh;
           color: $off-black-color;
           font-family: Bold 800;
           align-content: center;

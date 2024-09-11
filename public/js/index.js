@@ -111,8 +111,10 @@ calculatedAgeButton.addEventListener("click", () => {
     userDateDayAge = currentlyDate.getDate() - userBirthDay.getDate() + 30;
     document.querySelector(".result__day").innerHTML = userDateDayAge;
   } else {
+    
     userDateDayAge = currentlyDate.getDate() - userBirthDay.getDate();
     document.querySelector(".result__day").innerHTML = userDateDayAge;
+    userDateDayAge === 1 ? document.querySelector(".day").innerHTML = "day" : document.querySelector(".day").innerHTML = "days";
   }
   //months
   if (
@@ -124,6 +126,7 @@ calculatedAgeButton.addEventListener("click", () => {
   } else {
     userDateMonthAge = currentlyDate.getMonth() - userBirthDay.getMonth();
     document.querySelector(".result__month").innerHTML = userDateMonthAge;
+    userDateMonthAge === 1 ? document.querySelector(".month").innerHTML = "month" : document.querySelector(".month").innerHTML = "months";
   }
   //years
   if (
@@ -134,5 +137,6 @@ calculatedAgeButton.addEventListener("click", () => {
     document.querySelector(".result__year").innerHTML = userDateYearAge -= 1;
   } else {
     document.querySelector(".result__year").innerHTML = userDateYearAge;
+    userDateYearAge === 1 ? document.querySelector(".year").innerHTML = "year" : document.querySelector(".year").innerHTML = "years";
   }
 })

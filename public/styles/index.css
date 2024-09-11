@@ -45,8 +45,6 @@ body section .date__input--div {
   }
 }
 body section .date__input--div .input__div {
-  display: flex;
-  flex-direction: column;
   grid: 2%;
   margin: 2%;
   border-radius: 10px;
@@ -59,7 +57,7 @@ body section .date__input--div .input__div label {
 }
 body section .date__input--div .input__div input {
   font-size: 32px;
-  width: 12vh;
+  width: 14vh;
   color: hsl(0, 0%, 8%);
   font-family: Bold 800;
   align-content: center;
